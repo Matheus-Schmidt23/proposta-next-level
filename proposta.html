@@ -527,12 +527,19 @@
   .print-view{display:none;}
 
   @media print{
-    @page{ size:13.333in 7.5in; margin:0; }
-    html, body{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; color-adjust:exact !important; }
+    @page{ size:landscape; margin:0; }
+    html, body{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; color-adjust:exact !important; margin:0 !important; height:100% !important; }
     .screen-view, .pdf-btn{display:none !important;}
     body.unlocked .print-view{display:block !important;}
     body{background:#000 !important;}
-    .pslide{background:var(--bg) !important;}
+    .pslide{
+      width:100vw !important;
+      height:100vh !important;
+      max-width:none !important;
+      max-height:none !important;
+      margin:0 !important;
+      background:var(--bg) !important;
+    }
     .pslide.light{background:#f2f1ec !important;}
     .pslide.closing{background:var(--gold-bright) !important;}
     .pslide.cover{background:#000 !important;}
