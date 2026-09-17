@@ -438,11 +438,17 @@
   }
   .chiprow{
     display:flex;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
     gap:10px;
     margin-top:30px;
+    overflow-x:auto;
+    padding-bottom:6px;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
   }
   .chip{
+    flex:none;
+    white-space:nowrap;
     font-size:12px;
     color:var(--text-dim);
     border:1px solid var(--line);
